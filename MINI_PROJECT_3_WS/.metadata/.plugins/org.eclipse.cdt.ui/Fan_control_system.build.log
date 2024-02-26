@@ -1,0 +1,43 @@
+18:49:12 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../fan_control_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"fan_control_system.d" -MT"fan_control_system.o" -c -o "fan_control_system.o" "../fan_control_system.c"
+In file included from ../fan_control_system.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../fan_control_system.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:49:13 Build Finished. 0 errors, 2 warnings. (took 612ms)
+

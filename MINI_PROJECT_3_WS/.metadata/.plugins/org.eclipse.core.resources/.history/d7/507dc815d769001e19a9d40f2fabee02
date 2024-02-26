@@ -1,0 +1,27 @@
+/*
+ * motor.h
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+
+#ifndef MOTOR_H_
+#define MOTOR_H_
+#include "std_types.h"
+#include "gpio.h"
+/*************************************************************************
+ *                            DEFINITIONS                                *
+ *************************************************************************/
+#define DC_MOTOR_IN1_PORT PORTB_ID
+#define DC_MOTOR_IN1_PIN PIN0_ID
+#define DC_MOTOR_IN2_PORT PORTB_ID
+#define DC_MOTOR_IN2_PIN  PIN1_ID
+/*************************************************************************
+ *                           TYPE DECLARATION                            *
+ *************************************************************************/
+typedef enum{
+	MOTOR_STOP,MOTOR_CLOCKWISE,MOTOR_ANTICLOCKWISE
+}DcMotor_State;
+
+
+#endif /* MOTOR_H_ */

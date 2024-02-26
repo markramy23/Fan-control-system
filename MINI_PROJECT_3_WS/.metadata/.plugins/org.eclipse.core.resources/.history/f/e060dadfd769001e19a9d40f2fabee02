@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "pwm.h"
+#include "lm35_sensor.h"
+#include "my_lcd.h"
+#include "adc.h"
+#include "motor.h"
+#include<util/delay.h>
+int main(void){
+	ADC_ConfigType adc_config={ADC_INTERNAL_REF,ADC_DIV_8};
+	LCD_init();
+	LCD_displayString("Temp: ");
+	ADC_init(&adc_config);
+	DcMotor_init();
+	DcMotor_Rotate(MOTOR_CLOCKWISE,50);
+	_delay_ms(2000);
+	DcMotor_Rotate(MOTOR_ANTICLOCKWISE,75);
+	_delay_ms(2000);
+	DcMotor_Rotate(MOTOR_STOP,0);
+	uint8 temp;
+	while(1){
+//		LCD_moveCursor(0,6);
+//		temp=LM35_getTemperature();
+//		LCD_integerToString(temp);
+	}
+}
+

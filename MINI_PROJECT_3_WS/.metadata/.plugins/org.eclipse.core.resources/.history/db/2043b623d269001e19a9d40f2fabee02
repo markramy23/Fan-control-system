@@ -1,0 +1,22 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "pwm.h"
+#include "lm35_sensor.h"
+#include "my_lcd.h"
+#include "adc.h"
+int main(void){
+	LCD_init();
+	LCD_displayString("Temp: ");
+	ADC_init();
+	uint8 temp;
+	while(1){
+		LCD_moveCursor(0,6);
+		temp=LM35_getTemperature();
+		LCD_integerToString(temp);
+	}
+}
+

@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "pwm.h"
+#include "lm35_sensor.h"
+#include "my_lcd.h"
+#include "adc.h"
+#include "motor.h"
+#include<util/delay.h>
+int main(void){
+	ADC_ConfigType adc_config={ADC_INTERNAL_REF,ADC_DIV_8};
+	LCD_init();
+	LCD_moveCursor(0,4);
+	LCD_displayString("Fan is ");
+	LCD_moveCursor(1,4);
+	LCD_displayString("Temp =     c");
+	ADC_init(&adc_config);
+	DcMotor_init();
+	uint8 temp;
+	while(1){
+//		LCD_moveCursor(0,6);
+//		temp=LM35_getTemperature();
+//		LCD_integerToString(temp);
+	}
+}
+

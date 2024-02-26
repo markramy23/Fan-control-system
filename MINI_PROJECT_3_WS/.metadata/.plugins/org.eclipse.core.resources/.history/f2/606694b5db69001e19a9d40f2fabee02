@@ -1,0 +1,35 @@
+/*
+ * ADC.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "adc.h"
+
+#include "common_macros.h"
+#include <avr/io.h>
+
+/*
+ * Initialize adc with the desired ref voltage and prescaler
+ */
+void ADC_init(const ADC_ConfigType* Config_Ptr){
+	/*clear the first to bits in admux register then add the ref volt bits*/
+	ADMUX=(ADMUX & 0x3f)|((Config_Ptr->ref_volt)<<REFS0);
+	/*clear the last 3 bits in ADCSRA register and add the prescaler bits*/
+	ADCSRA=(ADCSRA & 0xf8)|(Config_Ptr->prescaler);
+	ADCSRA|=(1<<ADEN); /*enable ADC*/
+}
+
+/*
+ * Read the desired channel from the adc
+ */
+uint16 ADC_readChannel(ADC_ChannelNmber channel_num)
+{
+	channel_num &= 0x07; /* Input channel number must be from 0 --> 7 */
+	ADMUX &= 0xE0; /* Clear first 5 bits in the ADMUX (channel number MUX4:0 bits) before set the required channel */
+	ADMUX = ADMUX | channel_num; /* Choose the correct channel by setting the channel number in MUX4:0 bits */
+	SET_BIT(ADCSRA,ADSC); /* Start conversion write '1' to ADSC */
+	while(BIT_IS_CLEAR(ADCSRA,ADIF)); /* Wait for conversion to complete, ADIF becomes '1' */
+	SET_BIT(ADCSRA,ADIF); /* Clear ADIF by write '1' to it :) */
+	return ADC; /* Read the digital value from the data register */
+}

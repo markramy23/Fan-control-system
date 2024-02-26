@@ -1,0 +1,70 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "pwm.h"
+#include "lm35_sensor.h"
+#include "my_lcd.h"
+#include "adc.h"
+#include "motor.h"
+#include<util/delay.h>
+#define FAN_ON 1
+#define FAN_OFF 0
+uint8 fanCurrentState=FAN_OFF;
+void fanControl(uint8 temp){
+	if(temp<30){
+		DcMotor_Rotate(MOTOR_STOP,0);
+		fanCurrentState=FAN_OFF;
+	}
+	else if(temp>=30 && temp<60){
+		DcMotor_Rotate(MOTOR_CLOCKWISE,25);
+		fanCurrentState=FAN_ON;
+	}
+	else if(temp>=60 && temp<90){
+		DcMotor_Rotate(MOTOR_CLOCKWISE,50);
+		fanCurrentState=FAN_ON;
+	}
+	else if(temp>=90 && temp<120){
+		DcMotor_Rotate(MOTOR_CLOCKWISE,75);
+		fanCurrentState=FAN_ON;
+	}
+	else if(temp>=120){
+		DcMotor_Rotate(MOTOR_CLOCKWISE,100);
+		fanCurrentState=FAN_ON;
+	}
+}
+int main(void){
+	ADC_ConfigType adc_config={ADC_INTERNAL_REF,ADC_DIV_8};
+	LCD_init();
+	LCD_moveCursor(0,4);
+	LCD_displayString("Fan is ");
+	LCD_moveCursor(1,4);
+	LCD_displayString("Temp =     c");
+	ADC_init(&adc_config);
+	DcMotor_init();
+	uint8 temp=0;
+	while(1){
+		LCD_moveCursor(0,11);
+		if(fanCurrentState==FAN_OFF){
+			LCD_displayString("off");
+		}
+		else if(fanCurrentState==FAN_ON){
+			LCD_displayString("on");
+		}
+		LCD_moveCursor(1,11);
+		if(temp>=100){
+			LCD_integerToString(temp);
+
+		}
+		else{
+			LCD_integerToString(temp);
+			LCD_displayChar(' ');
+		}
+		temp=LM35_getTemperature();
+		fanControl(temp);
+
+	}
+}
+

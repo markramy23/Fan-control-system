@@ -1,0 +1,13 @@
+/*
+ * ADC.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "ADC.h"
+#include "common_macros.h"
+#include <avr/io.h>
+void ADC_init(const ADC_ConfigType* Config_Ptr){
+	admux
+}
+

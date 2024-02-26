@@ -1,0 +1,1170 @@
+16:52:14 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../my_lcd.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13176 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:54:23 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13170 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:55:03 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13176 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:58:02 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:58:31 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:58:47 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:59:03 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:59:20 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:59:56 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:00:14 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:00:24 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:00:43 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:01:16 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:01:36 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:01:48 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13218 bytes (40.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:05:09 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:12: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11510 bytes (35.1% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:06:28 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:14: error: too few arguments to function 'ADC_init'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:09:36 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:14: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11528 bytes (35.2% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:47:57 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:16: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:24: warning: unused variable 'temp'
+Finished building: ../main.c
+ 
+Building file: ../motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"motor.d" -MT"motor.o" -c -o "motor.o" "../motor.c"
+Finished building: ../motor.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../my_lcd.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12122 bytes (37.0% Full)
+(.text + .data + .bootloader)
+
+Data:        272 bytes (13.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:08:45 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:36: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:38: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:46: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:49: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11890 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:09:11 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:36: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:38: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:46: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:49: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11890 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:10:42 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:42: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:44: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:54: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11936 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:11:11 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:42: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:44: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:54: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:15:05 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:42: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:44: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:54: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./gpio.o ./lm35_sensor.o ./main.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:40:00 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"adc.d" -MT"adc.o" -c -o "adc.o" "../adc.c"
+Finished building: ../adc.c
+ 
+Building file: ../fan_control_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"fan_control_system.d" -MT"fan_control_system.o" -c -o "fan_control_system.o" "../fan_control_system.c"
+In file included from ../fan_control_system.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../fan_control_system.c: In function 'main':
+../fan_control_system.c:89: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../fan_control_system.c:93: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../fan_control_system.c:103: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../fan_control_system.c:106: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../fan_control_system.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"motor.d" -MT"motor.o" -c -o "motor.o" "../motor.c"
+Finished building: ../motor.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../my_lcd.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:41:03 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c:107: error: conflicting types for 'LCD_displayString'
+../my_lcd.h:116: error: previous declaration of 'LCD_displayString' was here
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+make: *** [my_lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:41:26 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+../my_lcd.c: In function 'LCD_integerToString':
+../my_lcd.c:153: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../my_lcd.c: In function 'LCD_floatToString':
+../my_lcd.c:161: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:47:35 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c:107: error: conflicting types for 'LCD_displayString'
+../my_lcd.h:116: error: previous declaration of 'LCD_displayString' was here
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+make: *** [my_lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:47:59 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../fan_control_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"fan_control_system.d" -MT"fan_control_system.o" -c -o "fan_control_system.o" "../fan_control_system.c"
+In file included from ../fan_control_system.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../fan_control_system.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:48:22 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: type defaults to 'int' in declaration of 'type name'
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' makes pointer from integer without a cast
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:48:44 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c: In function 'LCD_displayStringRowColumn':
+../my_lcd.c:139: warning: passing argument 1 of 'LCD_displayString' discards qualifiers from pointer target type
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:49:03 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../my_lcd.c:107: error: conflicting types for 'LCD_displayString'
+../my_lcd.h:116: error: previous declaration of 'LCD_displayString' was here
+make: *** [my_lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:49:12 **** Incremental Build of configuration Debug for project Fan_control_system ****
+make all 
+Building file: ../fan_control_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"fan_control_system.d" -MT"fan_control_system.o" -c -o "fan_control_system.o" "../fan_control_system.c"
+In file included from ../fan_control_system.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../fan_control_system.c
+ 
+Building file: ../my_lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"my_lcd.d" -MT"my_lcd.o" -c -o "my_lcd.o" "../my_lcd.c"
+In file included from ../my_lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../my_lcd.c
+ 
+Building target: Fan_control_system.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Fan_control_system.map -mmcu=atmega32 -o "Fan_control_system.elf"  ./adc.o ./fan_control_system.o ./gpio.o ./lm35_sensor.o ./motor.o ./my_lcd.o ./pwm.o   
+Finished building target: Fan_control_system.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Fan_control_system.elf  >"Fan_control_system.lss"
+Finished building: Fan_control_system.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Fan_control_system.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11942 bytes (36.4% Full)
+(.text + .data + .bootloader)
+
+Data:        293 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

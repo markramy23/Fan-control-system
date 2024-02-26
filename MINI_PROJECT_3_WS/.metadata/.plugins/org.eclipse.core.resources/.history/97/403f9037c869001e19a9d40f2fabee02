@@ -1,0 +1,40 @@
+/*
+ * ADC.h
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+
+#ifndef ADC_H_
+#define ADC_H_
+#include "std_types.h"
+
+/*************************************************************************
+ *                              TYPE DECLARATION                         *
+ *************************************************************************/
+
+/* enum to choose the reference voltage source for the adc*/
+typedef enum{
+	AREF,AVCC,INTERNAL_REF=3
+}ADC_ReferenceVoltage;
+
+
+
+/*enum to choose the prescaler of the adc clock*/
+typedef enum{
+	DIV_2=1,DIV_4,DIV_8,DIV_16,DIV_32,DIV_64,DIV_128
+}ADC_Prescaler;
+
+
+
+/* config struct to be sent to initialize the adc with the preferred settings*/
+typedef struct{
+ADC_ReferenceVoltage ref_volt;
+ADC_Prescaler prescaler;
+}ADC_ConfigType;
+
+/*adc channel numbers */
+typedef enum{
+	ADC0,ADC1,ADC2,ADC3,ADC4,ADC5,ADC6,ADC7
+}ADC_ChannelNmber;
+#endif /* ADC_H_ */

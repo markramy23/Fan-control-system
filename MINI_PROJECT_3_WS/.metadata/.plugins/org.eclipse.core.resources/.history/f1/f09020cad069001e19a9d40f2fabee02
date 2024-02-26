@@ -1,0 +1,14 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: Mark
+ */
+#include "pwm.h"
+int main(void){
+	PWM_Timer0_start(50);
+	while(1){
+
+	}
+}
+
